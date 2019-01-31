@@ -157,7 +157,6 @@ $url-images: "images/";
   background-color: pink;
 }
 .about {
-  width: 100%;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(12, 1fr);
@@ -186,5 +185,25 @@ $url-images: "images/";
         background-color: pink;
       }
     }
+  }
+}
+.skill {
+  background-color: salmon;
+
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". . . title title title title title title . . ."
+    ". skill skill skill skill skill skill skill skill skill skill .";
+  h1 {
+    grid-area: title;
+    text-align: center;
+  }
+  ul {
+    grid-area: skill;
+    display: flex;
+    justify-content: space-between;
   }
 }
