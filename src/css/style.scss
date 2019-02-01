@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+@import "common.scss";
+
+// mobile first ~ 480px
+
+.header {
+  $header-height:50px;
+  height: $header-height;
+  @include grid-basic;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  ". logo logo . nav nav nav nav nav nav nav .";
+
+  &__logo{
+    @include font-monts(500);
+    grid-area : logo;
+    line-height:$header-height;
+
+  }
+  &__nav{
+    @include font-monts(400);
+    grid-area : nav;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    a{
+      flex : 1;
+      display:inline-block;
+      line-height: $header-height;
+      font-size:0.9rem;
+    }
+  }
+}
+.talk{
+  // margin: 3rem 0;
+  background-image: url($url-images + "bg-flower.jpg");
+  background-size: cover;
+  height: 100vh;
+
+  p{
+    @include font-monts(900);
+    color:white;
+    text-align: center;
+    font-size:2rem;
+    letter-spacing: -1.8px;
+    font-weight: 900;
+  }
+}
+.about {
+  @include grid-basic;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    ". . . ap ap ap ap ap ap . . ."
+    ". ai ai ai ai ai ai ai ai ai ai ."
+    ". . sns sns sns sns sns sns sns sns . .";
+  &__picture {
+    grid-area: ap;
+    img {
+      border-radius: 50%;
+    }
+  }
+  &__introduce {
+    grid-area: ai;
+    background-color: skyblue;
+    text-align: center;
+  }
+  &__sns {
+    grid-area: sns;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      a {
+        background-color: pink;
+        i{
+          font-size:1.6rem;
+        }
+      }
+    }
+  }
+}
+.skill {
+  background-color: salmon;
+  margin-top:3rem;
+  @include grid-basic;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". . . title title title title title title . . ."
+    ". skill skill skill skill skill skill skill skill skill skill .";
+  h1 {
+    grid-area: title;
+    text-align: center;
+  }
+  ul {
+    grid-area: skill;
+    display: flex;
+    justify-content: space-between;
+  }
+}
