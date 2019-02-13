@@ -6,8 +6,9 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,form,label,
 legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,
 hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,fieldset,button {
-  margin: 0;  padding: 0;  border: 0;  box-sizing: border-box;  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;  padding: 0;  border: 0;  box-sizing: border-box; font:inherit;  font-family: 'Noto Sans KR', sans-serif;
   color: #222;  text-decoration: none;  list-style: none;  border-collapse: collapse;  border-spacing: 0;
+  
 }
 /* HTML5 display-role reset for older browsers */
 /* 익스플로러 하위버전은 해당 태그를 인식하지 못한다. 인식하지 못하는 태그는 inline 요소로 들어가기때문에 width, height등의 속성 설정이 안된다. */
@@ -51,12 +52,37 @@ legend {
 img {
   width: 100%;
 }
+// drag selection style
+::selection{
+  background-color:pink;
+}
+// scroll bar style
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: pink; 
+  border-radius: 10px;
+}
 
 // font
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,500');
 @import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
 // variable
 $url-images: "../images/";
+$color-main: #b7dbf3;
+$color-menu: #6a6a6a;
+$color-bg : #fcfcfc;
 
 // mixin
 
@@ -67,9 +93,34 @@ $url-images: "../images/";
 @mixin font-mj{
   font-family: 'Major Mono Display', monospace;
 }
+@mixin font-nanum{
+  font-family: 'Nanum Gothic', sans-serif;
+}
+@mixin font-main($weight){
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: $weight
+}
+// common width 1200
+@mixin common-width{
+  max-width:1200px;
+  margin:0 auto;
+}
 
 @mixin grid-basic{  
   display:grid;
   grid-gap: 20px;
   grid-template-columns: repeat(12, 1fr);
+}
+
+// section header
+@mixin section-header{
+  text-align: center;
+    span{
+      border-bottom:5px solid $color-main;
+      display:inline-block;
+      line-height:1;
+      padding-bottom:15px;
+      font-size:1.9rem;
+      @include font-monts(600)
+    }
 }

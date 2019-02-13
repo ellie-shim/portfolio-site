@@ -14,58 +14,114 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="header__logo">SY</h1>
+      <h1 class="header__logo">
+        <span class="header__logo__line">
+        SOYOUNG SHIM
+        </span>
+      </h1>
       <nav class="header__nav">
-        <a href="#about">ABOUT</a>
+        <!-- <a href="#about">ABOUT</a>
         <a href="#skill">SKILL</a>
         <a href="#project">PROJECT</a>
         <a href="#career">CAREER</a>
+        <a href="#activity">ACTIVITY</a> -->
+        <a href="#about">about</a>
+        <a href="#skill">skill</a>
+        <a href="#project">project</a>
+        <a href="#career">career</a>
+        <a href="#activity">activity</a>
       </nav>
-    </header>
-    
-    <div class="container">
-      <section class="talk">
-        <!-- <p>junior</p><p>front-end</p><p>developer</p> -->
-        <p>JUNIOR</p><p>FRONT-END</p><p>DEVELOPER</p>
-      </section>
-      <section class="about">
-        <h1 class="readable-hidden">About me</h1>
+    </header>    
+    <div class="container">      
+      <section class="about" id="about">
         <figure class="about__picture">
           <img src="images/profile.jpg" alt="profile picture" />
           <figcaption class="readable-hidden">my profile picture</figcaption>
         </figure>
+        <h2 class="about__title"><span>About me</span></h2>
         <article class="about__introduce">
-          <p>안녕하세요 블라블라 wg</p>
-          <p>심소영입니다</p>
-          <p>포트폴리오 사이트</p>
-          <p>블라블라롸롸라라라ㅏ라</p>
-          <p>블라블라롸롸라라라ㅏ라</p>
-          <p>블라블라롸롸라라라ㅏ라</p>
-          <p>블라블라롸롸라라라ㅏ라</p>
-          <p>블라블라롸롸라라라ㅏ라</p>
-          <p>블라블라롸롸라라라ㅏ라</p>
+          <p>웹디자인 & 퍼블리싱을 하다가 개발에 흥미가 생긴
+          주니어 프론트엔드 개발자입니다.<br />
+          부족하지만 매주 스터디를 진행하며 지식을 키우고 있습니다.</p>
+          <p class="about__introduce__eng">I’m Junior Front-End Developer</p>
         </article>
         <article class="about__sns">
           <ul>
             <li>
-              <a href="#none"><i class="fab fa-github"></i></a>
+              <a href="#none" class="fab fa-github"></a>
             </li>
-            <li><a href="#none"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#none"><i class="fab fa-gitlab"></i></a></li>
-            <li><a href="#none"><i class="fab fa-blogger"></i></a></li>
+            <li><a href="#none" class="fab fa-instagram"></a></li>
+            <!-- <li><a href="#none"><i class="fab fa-gitlab"></i></a></li> -->
+            <li><a href="#none" class="fab fa-blogger"></a></li>
+            <li><a href="#none" class="far fa-envelope"></a></li>
           </ul>
         </article>
       </section>
-      <section class="skill">
-        <h1>SKILL</h1>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>SASS</li>
-          <li>JS</li>
-          <li>REACT</li>
-        </ul>
-      </section>
+      <div class="bg-color">
+        <section class="skill" id="skill">
+          <h2><span>Skill</span></h2>
+          <article class="skill__item">
+            <figure class="skill__subtitle">
+              <img src="images/html5.png" />
+              <figcaption><h3>HTML5</h3></figcaption>
+            </figure>
+            <ul class="skill__summary">
+              <li>HTML5 를 사용한 시멘틱 마크업</li>
+              <li>HTML5 및 XHTML 페이지 하드코딩</li>
+              <li>모바일 페이지 제작</li>
+              <li>웹 접근성 (Native, WAI-ARIA)</li>
+            </ul>
+          </article>
+          <article class="skill__item">
+            <figure class="skill__subtitle">
+              <img src="images/css3.png" />
+              <figcaption><h3>CSS3</h3></figcaption>
+            </figure>
+            <ul class="skill__summary">
+              <li>HTML5 를 사용한 시멘틱 마크업</li>
+              <li>HTML5 및 XHTML 페이지 하드코딩</li>
+              <li>모바일 페이지 제작</li>
+              <li>웹 접근성 (Native, WAI-ARIA)</li>
+            </ul>
+          </article>
+          <article class="skill__item">
+            <figure class="skill__subtitle">
+              <img src="images/js.png" />
+              <figcaption><h3>JavaScript</h3></figcaption>
+            </figure>
+            <ul class="skill__summary">
+              <li>HTML5 를 사용한 시멘틱 마크업</li>
+              <li>HTML5 및 XHTML 페이지 하드코딩</li>
+              <li>모바일 페이지 제작</li>
+              <li>웹 접근성 (Native, WAI-ARIA)</li>
+            </ul>
+          </article>
+          <article class="skill__item">
+            <figure class="skill__subtitle">
+              <img src="images/sass.png" />
+              <figcaption><h3>Sass</h3></figcaption>
+            </figure>
+            <ul class="skill__summary">
+              <li>HTML5 를 사용한 시멘틱 마크업</li>
+              <li>HTML5 및 XHTML 페이지 하드코딩</li>
+              <li>모바일 페이지 제작</li>
+              <li>웹 접근성 (Native, WAI-ARIA)</li>
+            </ul>
+          </article>
+          <article class="skill__item">
+            <figure class="skill__subtitle">
+              <img src="images/react.png" />
+              <figcaption><h3>React</h3></figcaption>
+            </figure>
+            <ul class="skill__summary">
+              <li>HTML5 를 사용한 시멘틱 마크업</li>
+              <li>HTML5 및 XHTML 페이지 하드코딩</li>
+              <li>모바일 페이지 제작</li>
+              <li>웹 접근성 (Native, WAI-ARIA)</li>
+            </ul>
+          </article>
+        </section>
+      </div>
     </div>
   </body>
 </html>
