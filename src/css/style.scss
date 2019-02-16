@@ -201,6 +201,12 @@
     margin-top:2rem;
   }
 }
+.web__size{
+  .project__screenshot{
+    max-width:900px;
+  }
+}
+
 .activity{
   padding:4rem 0;
   @include common-width;
@@ -218,7 +224,7 @@
   right:2rem;
   display:inline-block;
   // background: url('../images/arrow-up-solid.svg') no-repeat 0 50%;
-  background-color: gold;
+  background-color: $color-yellow;
   color:white;
   border-radius: 50%;
   $size:40px;
