@@ -168,25 +168,17 @@
     margin-top:0.5rem;
     text-align:center;
     span{
-      display:inline-block;
-      background-color: $color-main;
-      border-radius: 5px;
-      padding: 0 14px;
-      $height : 22px;
-      height:$height;
-      line-height:$height;
-      color:white;
-      font-size:0.9rem;
-      @include font-main(400);
+      @include period-tags;
     }
   }
   &__screenshot{
-    max-width:330px;
+    max-width:250px;
     margin:2rem auto 0 auto;
 
   }
   &__tags{
-    margin-top:1rem;
+    margin:1rem auto 0 auto;
+    max-width:300px;
     li{
       &::before{
         display: inline-block;
@@ -209,13 +201,12 @@
     margin-top:2rem;
   }
 }
-.career{
+.activity{
   padding:4rem 0;
   @include common-width;
   h2 {
     @include section-header;
   }
-
 }
 
 
