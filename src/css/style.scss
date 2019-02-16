@@ -102,8 +102,8 @@
   @include common-width;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-  padding:4rem 0;
+  grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+  padding:4rem 2rem;
   h2 {
     margin:0 0 2rem 0;
     @include section-header;
@@ -111,7 +111,6 @@
   }
   &__item{
     grid-column: span 1;
-    padding:0 2rem;
     margin-top:2.5rem;
     h3{
       font-size:1.5rem;
@@ -213,18 +212,74 @@
   h2 {
     @include section-header;
   }
+  figure{
+    max-width:500px;
+    margin:0 auto;
+  }
+  h3{
+    padding:1rem 2rem;
+    font-size:1.3rem;
+    text-align: center;
+  }
+  &__period{
+    text-align:center;
+    span{
+      @include period-tags;
+    }
+  }
+  &__description{
+    padding:1rem 2rem;
+    span{
+      font-size:0.8rem;
+      color:gray;
+    }
+  }
+  &__siots_link{
+    padding: 0 2rem;
+    display:flex;
+    justify-content: space-evenly;
+    a{
+      display: inline-block;
+      line-height:1.6rem;
+      color:$color-main;
+      @include font-main(400);
+      border:1px solid $color-main;
+      border-radius: 5px;
+      padding:0.5rem 1rem;
+      font-size:1.1rem;
+      &::before{
+        margin-right:6px;
+        font-family: "Font Awesome 5 Brands"
+
+      }
+      &:hover{
+        border-color:$color-yellow;
+        color:$color-yellow;
+      }
+      
+    }
+  }
 }
 
+// footer 푸터
+.footer{
+  background-color: $color-main;
+  text-align: center;
+  padding:2rem;
+  font-size:0.8rem;
+  color:white;
+}
 
 
 //go Top
 .go-top{
   position: fixed;
   bottom:2rem;
-  right:2rem;
+  left:calc(50% - 20px);
   display:inline-block;
   // background: url('../images/arrow-up-solid.svg') no-repeat 0 50%;
-  background-color: $color-yellow;
+  border:1px solid $color-yellow;
+  background-color:  rgba(255, 205, 109, 0.69);
   color:white;
   border-radius: 50%;
   $size:40px;
