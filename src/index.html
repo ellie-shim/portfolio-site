@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/style.scss" rel="stylesheet" />
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
@@ -13,25 +14,25 @@
     />
   </head>
   <body>
-    <header class="header">
+    <header class="header" >
       <h1 class="header__logo">
         <span class="header__logo__line">
         SOYOUNG SHIM
         </span>
       </h1>
-      <nav class="header__nav">
-        <!-- <a href="#about">ABOUT</a>
-        <a href="#skill">SKILL</a>
-        <a href="#project">PROJECT</a>
-        <a href="#career">CAREER</a>
-        <a href="#activity">ACTIVITY</a> -->
-        <a href="#about">about</a>
-        <a href="#skill">skill</a>
-        <a href="#project">project</a>
-        <a href="#career">career</a>
-        <a href="#activity">activity</a>
-      </nav>
     </header>    
+    <nav class="header__nav header__nav-scroll_on">
+      <!-- <a href="#about">ABOUT</a>
+      <a href="#skill">SKILL</a>
+      <a href="#project">PROJECT</a>
+      <a href="#career">CAREER</a>
+      <a href="#activity">ACTIVITY</a> -->
+      <a href="#about">about</a>
+      <a href="#skill">skill</a>
+      <a href="#project">project</a>
+      <a href="#career">career</a>
+      <a href="#activity">activity</a>
+    </nav>
     <div class="container">      
       <section class="about" id="about">
         <figure class="about__picture">
@@ -63,65 +64,129 @@
           <article class="skill__item">
             <figure class="skill__subtitle">
               <img src="images/html5.png" />
-              <figcaption><h3>HTML5</h3></figcaption>
+              <figcaption class="readable-hidden">html5</figcaption>
             </figure>
+            <h3>HTML5</h3>
             <ul class="skill__summary">
-              <li>HTML5 를 사용한 시멘틱 마크업</li>
+              <li>HTML5를 사용한 Semantic 마크업</li>
               <li>HTML5 및 XHTML 페이지 하드코딩</li>
-              <li>모바일 페이지 제작</li>
+              <li>모바일 페이지(반응형) 제작</li>
               <li>웹 접근성 (Native, WAI-ARIA)</li>
             </ul>
           </article>
           <article class="skill__item">
             <figure class="skill__subtitle">
               <img src="images/css3.png" />
-              <figcaption><h3>CSS3</h3></figcaption>
+              <figcaption class="readable-hidden">css3</figcaption>
             </figure>
+            <h3>CSS3</h3>
             <ul class="skill__summary">
-              <li>HTML5 를 사용한 시멘틱 마크업</li>
-              <li>HTML5 및 XHTML 페이지 하드코딩</li>
-              <li>모바일 페이지 제작</li>
-              <li>웹 접근성 (Native, WAI-ARIA)</li>
+              <li>Flex를 이용한 flexible box</li>
+              <li>Grid를 이용한 Grid layout</li>
+              <li>그 외 CSS3의 기능 사용 가능</li>
             </ul>
           </article>
           <article class="skill__item">
             <figure class="skill__subtitle">
               <img src="images/js.png" />
-              <figcaption><h3>JavaScript</h3></figcaption>
+              <figcaption class="readable-hidden">JavaScript</figcaption>
             </figure>
+            <h3>JavaScript</h3>
             <ul class="skill__summary">
-              <li>HTML5 를 사용한 시멘틱 마크업</li>
-              <li>HTML5 및 XHTML 페이지 하드코딩</li>
-              <li>모바일 페이지 제작</li>
-              <li>웹 접근성 (Native, WAI-ARIA)</li>
+              <li>ES6+ 문법 사용</li>
+              <li>Webpack, Parcel 번들러 이해</li>
+              <li>순수JS를 이용하여 쇼핑몰 구현(빕다방)</li>
+              <li></li>
             </ul>
           </article>
           <article class="skill__item">
             <figure class="skill__subtitle">
               <img src="images/sass.png" />
-              <figcaption><h3>Sass</h3></figcaption>
+              <figcaption class="readable-hidden">SASS</figcaption>
             </figure>
+            <h3>Sass</h3>
             <ul class="skill__summary">
-              <li>HTML5 를 사용한 시멘틱 마크업</li>
-              <li>HTML5 및 XHTML 페이지 하드코딩</li>
-              <li>모바일 페이지 제작</li>
-              <li>웹 접근성 (Native, WAI-ARIA)</li>
+              <li>기본적인 Sass 사용</li>
+              <li>Mixin을 이용한 코드 재사용</li>
             </ul>
           </article>
           <article class="skill__item">
             <figure class="skill__subtitle">
               <img src="images/react.png" />
-              <figcaption><h3>React</h3></figcaption>
+              <figcaption class="readable-hidden">react</figcaption>
             </figure>
+            <h3>React</h3>
             <ul class="skill__summary">
-              <li>HTML5 를 사용한 시멘틱 마크업</li>
-              <li>HTML5 및 XHTML 페이지 하드코딩</li>
-              <li>모바일 페이지 제작</li>
-              <li>웹 접근성 (Native, WAI-ARIA)</li>
+              <li>React를 사용한 프로젝트 구현</li>
+              <li>React-Router의 이해 및 사용</li>
+              <li>Redux의 이해와 간단한 사용</li>
+              <li>Lift Cycle의 이해</li>
+              <li>ContextAPI와 HOC의 이해</li>
             </ul>
           </article>
         </section>
       </div>
+      <section class="project" id="project">
+        <h2><span>Project</span></h2>
+        <article class="project__item">
+          <h3><a href="https://jogiyo.netlify.com">요기요 웹사이트 클론(모바일)</a></h3>
+          <div class="project__period"><span>2018.12.03~2018.12.21</span></div>
+          <figure class="project__screenshot">
+            <img src="images/project-yogiyo.png" alt="요기요 웹사이트 클론">
+            <figcaption class="readable-hidden">요기요 웹사이트 클론</figcaption>
+          </figure>
+          <ul class="project__tags">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>SASS</li>
+            <li>React</li>
+            <li>React-Router</li>
+            <li>Axios</li>
+            <li>Git</li>
+            <li>Slack</li>
+            <li>Team-Project</li>
+          </ul>
+          <p class="project__description">
+            React를 이용하여 작업한 '요기요' 사이트 클론 프로젝트입니다.<br />
+            본인을 포함한 프론트엔드 3명, 백엔드 2명과 함께 팀을 이루어 작업하였습니다.<br />
+            <br />
+            React를 이용하여 구현하였고, 지오로케이션을 이용한 위치찾기 기능이 있습니다.<br />
+            <br />
+            각자 작업하고 하나의 Git  레포에 pull Request를 보내는 방법으로 협업하였습니다.
+
+          </p>
+        </article>
+        <!-- 2번째 프로젝트 -->
+        <article class="project__item">
+          <h3><a href="https://jovial-lalande-ce4dcc.netlify.com">쇼핑몰(빕다방)</a></h3>
+          <div class="project__period"><span>2018.11.07~2018.11.11</span></div>
+          <figure class="project__screenshot">
+            <img src="images/project-bibdabang.png" alt="쇼핑몰(빕다방)">
+            <figcaption class="readable-hidden">쇼핑몰(빕다방)</figcaption>
+          </figure>
+          <ul class="project__tags">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>ES6</li>
+            <li>SPA</li>
+          </ul>
+          <p class="project__description">
+            순수 자바스크립트를 이용해 만든 쇼핑몰입니다.<br />
+            '빽다방'의 데이터를 이용하였습니다.
+          </p>
+        </article>
+      </section>
+      <div class="bg-color">
+        <section class="career" id="career">
+          <h2><span>Career</span></h2>
+        </section>
+      </div>
     </div>
+    <div class="go-top">
+      <i class="fas fa-arrow-up"></i>
+      <span class="readable-hidden">go to top</span>
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>

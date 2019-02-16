@@ -4,12 +4,12 @@
 
 // mobile first ~ 480px
 .header {
-  position: relative;
+  background-color: #fff;
   @include common-width;
-  $header-height:70px;
+  $header-height:50px;
   &__logo{
     text-align: center;
-    padding-top:35px;
+    padding-top:25px;
     &__line{
       @include font-main(600);
       font-size:2.2rem;
@@ -28,24 +28,39 @@
     align-items: center;
     text-align: center;
     position:sticky;
-    top:70px;
+    top:0px;
+    background-color: white;
+    transition : all 1s;
     a{
       @include font-main(400);
       display:inline-block;
       line-height: $header-height;
       font-size : 1rem;
       color: $color-menu;
+      transition : all 1s;
       &:hover{
         color:$color-main;
       }
     }
+    &-scroll_on{
+    background-color:rgba(183, 219, 243, 0.8);
+      a{
+        line-height:40px;
+          &:hover{
+          color:white;
+          }
+
+      }
+    }
   }
 }
+
 .about {
+  padding-top:50px;
   @include common-width;
   &__picture {
     width:132px;
-    margin: 10px auto 2rem auto;
+    margin: 0.5rem auto 2rem auto;
     img {
       border-radius: 50%;
     }
@@ -57,7 +72,7 @@
     text-align: center;
     padding: 0 2rem;
     max-width:400px;
-    margin: 1rem auto 0 auto;
+    margin: 0 auto ;
     &__eng{
       margin-top:15px;
       @include font-main(400);
@@ -65,11 +80,12 @@
     }
   }
   &__sns {
+    padding: 3rem;
     ul {
       display: flex;
       justify-content: space-between;
       width:200px;
-      margin: 3rem auto;
+      margin: 0 auto;
       a {
         font-size:1.6rem;
         &:hover{
@@ -85,30 +101,158 @@
 .skill {
   @include common-width;
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 10px;
   grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  padding:4rem 0;
   h2 {
-    margin:3rem 0 2rem 0;
+    margin:0 0 2rem 0;
     @include section-header;
     grid-column: 1/-1;
   }
   &__item{
     grid-column: span 1;
-    padding:1rem;
+    padding:0 2rem;
+    margin-top:2.5rem;
+    h3{
+      font-size:1.5rem;
+      line-height:1;
+      margin-bottom:1rem;
+      @include font-main(600);
+      text-align:center;
+    }
   }
   &__subtitle{
     text-align: center;
     img{
       width:40px;
     }
-    h3{
-      font-size:1.5rem;
-      line-height:1;
-      margin-bottom:1rem;
-      @include font-main(600);
-    }
   }
   &__summary{
     text-align:center;
   }
 }
+.project {
+  padding:4rem 0;
+  @include common-width;
+  h2 {
+    @include section-header;
+  }
+  &__item{
+    margin-top:2.5rem;
+    padding:0 2rem;
+    h3{
+      text-align:center;
+      a{
+        font-size:1.3rem;
+        transition: all 1s;
+      &:hover{
+        color:$color-main-text;
+      
+      }
+      }
+    }
+    &::after{
+      display:block;
+      content:'';
+      margin-top:2.5rem;
+      border-top: 10px dotted rgba(183, 219, 243, 0.25);
+    }
+    &:last-child{
+      &::after{
+        display:none;
+      }
+    }
+
+  }
+  &__period{
+    margin-top:0.5rem;
+    text-align:center;
+    span{
+      display:inline-block;
+      background-color: $color-main;
+      border-radius: 5px;
+      padding: 0 14px;
+      $height : 22px;
+      height:$height;
+      line-height:$height;
+      color:white;
+      font-size:0.9rem;
+      @include font-main(400);
+    }
+  }
+  &__screenshot{
+    max-width:330px;
+    margin:2rem auto 0 auto;
+
+  }
+  &__tags{
+    margin-top:1rem;
+    li{
+      &::before{
+        display: inline-block;
+        content : "#";
+        margin-right:2px;
+      }
+      border:1px solid $color-main;
+      border-radius: 5px;
+      display:inline-block;
+      height:22px;
+      line-height:20px;
+      @include font-main(400);
+      font-size:0.9rem;
+      padding: 0 10px;
+      color:$color-main-text;
+      margin:2px 0;
+    }
+  }
+  &__description{
+    margin-top:2rem;
+  }
+}
+.career{
+  padding:4rem 0;
+  @include common-width;
+  h2 {
+    @include section-header;
+  }
+
+}
+
+
+
+//go Top
+.go-top{
+  position: fixed;
+  bottom:2rem;
+  right:2rem;
+  display:inline-block;
+  // background: url('../images/arrow-up-solid.svg') no-repeat 0 50%;
+  background-color: gold;
+  color:white;
+  border-radius: 50%;
+  $size:40px;
+  width:$size;
+  height:$size;
+  text-align: center;
+  line-height:$size;
+  font-size:1rem;
+  i{
+  color:white;
+  font-size:1rem;
+  }
+  &-hover{
+    i{
+
+      // animation
+      -webkit-animation-name: goTop;
+      animation-name: goTop;
+      -webkit-animation-duration: 1.3s;
+      animation-duration: 1.3s;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count : infinite;
+    }
+  
+  }
+}
+  
