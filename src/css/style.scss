@@ -188,9 +188,6 @@
     padding:0 2rem;
     h3{
       text-align:center;
-      @include breakpoint('tablet'){
-        display: inline-block;
-      }
       a{
         font-size:1.3rem;
         transition: all 1s;
@@ -205,20 +202,17 @@
       content:'';
       margin-top:2.5rem;
       border-top: 10px dotted rgba(183, 219, 243, 0.25);
-      clear: both;
     }
     &:last-child{
       &::after{
         display:none;
       }
     }
+
   }
   &__period{
     margin-top:0.5rem;
     text-align:center;
-      @include breakpoint('tablet'){
-        display: inline-block;
-      }
     span{
       @include period-tags;
     }
@@ -226,20 +220,11 @@
   &__screenshot{
     max-width:250px;
     margin:2rem auto 0 auto;
-      @include breakpoint('tablet'){
-        float:left;
-        margin:0 2rem 0 0;
-        max-width:200px;
-      }
 
   }
   &__tags{
     margin:1rem auto 0 auto;
     max-width:300px;
-      @include breakpoint('tablet'){
-        display: inline-block;
-        max-width:420px;
-      }
     li{
       &::before{
         display: inline-block;
