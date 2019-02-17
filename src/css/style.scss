@@ -191,6 +191,7 @@
     padding:0 2rem;
     display:grid;
     grid-template: repeat(5, auto) / 270px auto;
+    justify-content: center;
 
     h3{
       text-align:center;
