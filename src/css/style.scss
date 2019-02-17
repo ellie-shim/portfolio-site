@@ -7,9 +7,23 @@
   background-color: #fff;
   @include common-width;
   $header-height:50px;
+  
+  // 768 tablet 
+  @include breakpoint('tablet'){
+    padding:0 2rem;
+    position:sticky;
+    top:0px;
+    border-bottom:1px solid rgba(194, 194, 194, 0.1);
+  }
   &__logo{
     text-align: center;
     padding-top:25px;
+    
+  // 768 tablet 
+  @include breakpoint('tablet'){
+    text-align: left;
+    display:inline-block;
+  }
     &__line{
       @include font-main(600);
       font-size:2.2rem;
@@ -22,6 +36,7 @@
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b7dbf3',GradientType=0 ); /* IE6-9 */
     }
   }
+  // 모바일버전 nav
   &__nav{
     display:flex;
     justify-content: space-around;
@@ -31,6 +46,7 @@
     top:0px;
     background-color: white;
     transition : all 1s;
+
     a{
       @include font-main(400);
       display:inline-block;
@@ -51,6 +67,34 @@
           }
 
       }
+    }
+    // 768 tablet 
+    @include breakpoint('tablet'){
+      display:none;
+    }
+  }
+  // tablet 이상 버전 nav
+  &__nav-web{
+    display:none;    
+    // 768 tablet 
+    @include breakpoint('tablet'){
+      display:inline-flex;
+      justify-content: flex-end;
+      float:right;
+      padding-top:25px;
+      a{
+        @include font-main(400);
+        line-height:35px;
+        font-size : 1rem;
+        color: $color-menu;
+        transition : all 1s;
+        margin-left:3rem;
+        &:hover{
+          color:$color-main;
+          text-decoration:underline wavy pink;
+        }
+      }
+      
     }
   }
 }
@@ -102,8 +146,11 @@
   @include common-width;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+  grid-template-columns: repeat(auto-fill,minmax(110px,1fr));
   padding:4rem 2rem;
+  @include breakpoint('laptop'){
+    grid-template-columns: repeat(auto-fill,minmax(190px,1fr));
+  }
   h2 {
     margin:0 0 2rem 0;
     @include section-header;
@@ -141,6 +188,9 @@
     padding:0 2rem;
     h3{
       text-align:center;
+      @include breakpoint('tablet'){
+        display: inline-block;
+      }
       a{
         font-size:1.3rem;
         transition: all 1s;
@@ -155,17 +205,20 @@
       content:'';
       margin-top:2.5rem;
       border-top: 10px dotted rgba(183, 219, 243, 0.25);
+      clear: both;
     }
     &:last-child{
       &::after{
         display:none;
       }
     }
-
   }
   &__period{
     margin-top:0.5rem;
     text-align:center;
+      @include breakpoint('tablet'){
+        display: inline-block;
+      }
     span{
       @include period-tags;
     }
@@ -173,11 +226,20 @@
   &__screenshot{
     max-width:250px;
     margin:2rem auto 0 auto;
+      @include breakpoint('tablet'){
+        float:left;
+        margin:0 2rem 0 0;
+        max-width:200px;
+      }
 
   }
   &__tags{
     margin:1rem auto 0 auto;
     max-width:300px;
+      @include breakpoint('tablet'){
+        display: inline-block;
+        max-width:420px;
+      }
     li{
       &::before{
         display: inline-block;
