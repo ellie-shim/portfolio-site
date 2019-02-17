@@ -17,7 +17,7 @@
   }
   &__logo{
     text-align: center;
-    padding-top:25px;
+    padding-top:20px;
     
   // 768 tablet 
   @include breakpoint('tablet'){
@@ -81,7 +81,7 @@
       display:inline-flex;
       justify-content: flex-end;
       float:right;
-      padding-top:25px;
+      padding-top:20px;
       a{
         @include font-main(400);
         line-height:35px;
@@ -146,10 +146,10 @@
   @include common-width;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill,minmax(110px,1fr));
+  grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
   padding:4rem 2rem;
   @include breakpoint('laptop'){
-    grid-template-columns: repeat(auto-fill,minmax(190px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
   }
   h2 {
     margin:0 0 2rem 0;
@@ -180,14 +180,22 @@
 .project {
   padding:4rem 0;
   @include common-width;
+  // display:grid;
+  // grid-template-columns: repeat(auto-fill, minmax(auto, 500px));
   h2 {
     @include section-header;
+    // grid-column: 1/-1;
   }
   &__item{
     margin-top:2.5rem;
     padding:0 2rem;
+    display:grid;
+    grid-template: repeat(5, auto) / 270px auto;
+
     h3{
       text-align:center;
+      grid-row: span 1;
+      grid-column: 1/-1;
       a{
         font-size:1.3rem;
         transition: all 1s;
@@ -202,6 +210,8 @@
       content:'';
       margin-top:2.5rem;
       border-top: 10px dotted rgba(183, 219, 243, 0.25);
+      grid-row: span 1;
+      grid-column: 1/-1;
     }
     &:last-child{
       &::after{
@@ -213,18 +223,24 @@
   &__period{
     margin-top:0.5rem;
     text-align:center;
+    grid-row:span 1;
+      grid-column: 1/-1;
     span{
       @include period-tags;
     }
   }
   &__screenshot{
-    max-width:250px;
+    max-width:230px;
     margin:2rem auto 0 auto;
+      grid-row: span 1;
+      grid-column: 1/-1;
 
   }
   &__tags{
     margin:1rem auto 0 auto;
-    max-width:300px;
+      grid-row: span 1;
+      grid-column: 1/-1;
+      text-align: center;
     li{
       &::before{
         display: inline-block;
@@ -245,11 +261,48 @@
   }
   &__description{
     margin-top:2rem;
+      grid-row: span 1;
+      grid-column: 1/-1;
+      text-align: center;
   }
 }
 .web__size{
   .project__screenshot{
     max-width:900px;
+  }
+}
+// 768 project
+.mb__size{
+  @include breakpoint('tablet'){
+    h3{
+      grid-column: 2/span 1;
+      text-align: left;
+    }
+    .project__period{
+      grid-column: 2/span 1;
+      text-align: left;
+
+    }
+    .project__screenshot{
+      grid-column: 1/span 1;
+      grid-row:1/-1;
+      margin:0 2rem 0 0;
+
+    }
+    .project__tags{
+      grid-column: 2/span 1;
+      text-align: left;
+      margin:1rem 0 0 0;
+
+
+    }
+    .project__description{
+      grid-column: 2/span 1;
+      text-align: left;
+
+
+    }
+
   }
 }
 
@@ -276,6 +329,7 @@
   }
   &__description{
     padding:1rem 2rem;
+    text-align:center;
     span{
       font-size:0.8rem;
       color:gray;
