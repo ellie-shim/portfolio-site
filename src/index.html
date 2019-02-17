@@ -14,26 +14,28 @@
     />
   </head>
   <body>
-    <header class="header" >
-      <h1 class="header__logo">
-        <span class="header__logo__line">
-        SOYOUNG SHIM
-        </span>
-      </h1>
-      <nav class="header__nav-web">
-        <a href="#about">about</a>
-        <a href="#skill">skill</a>
-        <a href="#project">project</a>
-        <a href="#activity">activity</a>
-      </nav>
-    </header>    
+    <header class="header">
+      <div class="header__wrap">
+        <h1 class="header__logo">
+          <span class="header__logo__line">
+            SOYOUNG SHIM
+          </span>
+        </h1>
+        <nav class="header__nav-web">
+          <a href="#about">about</a>
+          <a href="#skill">skill</a>
+          <a href="#project">project</a>
+          <a href="#activity">activity</a>
+        </nav>
+      </div>
+    </header>
     <nav class="header__nav header__nav-scroll_on">
       <a href="#about">about</a>
       <a href="#skill">skill</a>
       <a href="#project">project</a>
       <a href="#activity">activity</a>
     </nav>
-    <div class="container">      
+    <div class="container">
       <section class="about" id="about">
         <figure class="about__picture">
           <img src="images/profile.jpg" alt="profile picture" />
@@ -41,20 +43,39 @@
         </figure>
         <h2 class="about__title"><span>About me</span></h2>
         <article class="about__introduce">
-          <p>웹디자인 & 퍼블리싱을 하다가 개발에 흥미가 생긴
-          주니어 프론트엔드 개발자입니다.<br />
-          부족하지만 매주 스터디를 진행하며 지식을 키우고 있습니다.</p>
+          <p>
+            웹디자인 & 퍼블리싱을 하다가 개발에 흥미가 생긴 주니어 프론트엔드
+            개발자입니다.<br />
+            부족하지만 매주 스터디를 진행하며 지식을 키우고 있습니다.
+          </p>
           <p class="about__introduce__eng">I’m Junior Front-End Developer</p>
         </article>
         <article class="about__sns">
           <ul>
             <li>
-              <a href="https://github.com/ellie-shim" target="_blank" class="fab fa-github"></a>
+              <a
+                href="https://github.com/ellie-shim"
+                target="_blank"
+                class="fab fa-github"
+              ></a>
             </li>
-            <li><a href="https://www.instagram.com/bb__gram/" target="_blank" class="fab fa-instagram"></a></li>
-            <!-- <li><a href="#none"><i class="fab fa-gitlab"></i></a></li> -->
-            <li><a href="https://ellie-shim.github.io" target="_blank" class="fab fa-blogger"></a></li>
-            <li><a href="mailto:sovv12@gmail.com" class="far fa-envelope"></a></li>
+            <li>
+              <a
+                href="https://www.instagram.com/bb__gram/"
+                target="_blank"
+                class="fab fa-instagram"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://ellie-shim.github.io"
+                target="_blank"
+                class="fab fa-blogger"
+              ></a>
+            </li>
+            <li>
+              <a href="mailto:sovv12@gmail.com" class="far fa-envelope"></a>
+            </li>
           </ul>
         </article>
       </section>
@@ -101,11 +122,13 @@
       <section class="project" id="project">
         <h2><span>Project</span></h2>
         <article class="project__item mb__size">
-          <h3><a href="https://jogiyo.netlify.com">요기요 웹사이트 클론(모바일)</a></h3>
+          <h3>요기요 웹사이트 클론(모바일)</h3>
           <div class="project__period"><span>2018.12.03~2018.12.21</span></div>
           <figure class="project__screenshot">
-            <img src="images/project-yogiyo.png" alt="요기요 웹사이트 클론">
-            <figcaption class="readable-hidden">요기요 웹사이트 클론</figcaption>
+            <img src="images/project-yogiyo.png" alt="요기요 웹사이트 클론" />
+            <figcaption class="readable-hidden">
+              요기요 웹사이트 클론
+            </figcaption>
           </figure>
           <ul class="project__tags">
             <li>HTML5</li>
@@ -120,20 +143,54 @@
           </ul>
           <p class="project__description">
             React를 이용하여 작업한 '요기요' 사이트 클론 프로젝트입니다.<br />
-            본인을 포함한 프론트엔드 3명, 백엔드 2명과 함께 팀을 이루어 작업하였습니다.<br />
+            본인을 포함한 프론트엔드 3명, 백엔드 2명과 함께 팀을 이루어
+            작업하였습니다.<br />
             <br />
-            React를 이용하여 구현하였고, 지오로케이션을 이용한 위치찾기 기능이 있습니다.<br />
+            React를 이용하여 구현하였고, 지오로케이션을 이용한 위치찾기 기능이
+            있습니다.<br />
             <br />
-            각자 작업하고 하나의 Git  레포에 pull Request를 보내는 방법으로 협업하였습니다.
-
+            각자 작업하고 하나의 Git 레포에 pull Request를 보내는 방법으로
+            협업하였습니다.
           </p>
+          <ul class="project__links">
+            <li>
+              <a
+                href="https://github.com/joonkim0625/fds-jogiyo"
+                target="_blank"
+                class="fab fa-github"
+                ><span class="readable-hidden"
+                  >요기요 클론 프로젝트 Github 바로가기</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://jogiyo.netlify.com/"
+                target="_blank"
+                class="fab fa-chrome"
+                ><span class="readable-hidden"
+                  >요기요 클론 프로젝트 웹사이트 바로가기</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/H30oLshgEUU"
+                target="_blank"
+                class="fab fa-youtube"
+                ><span class="readable-hidden"
+                  >요기요 클론 프로젝트 Youtube 바로가기</span
+                ></a
+              >
+            </li>
+          </ul>
         </article>
         <!-- 2번째 프로젝트 -->
         <article class="project__item web__size">
-          <h3><a href="https://jovial-lalande-ce4dcc.netlify.com">쇼핑몰(빕다방)</a></h3>
+          <h3>쇼핑몰(빕다방)</h3>
           <div class="project__period"><span>2018.11.07~2018.11.11</span></div>
           <figure class="project__screenshot">
-            <img src="images/project-bibdabang.png" alt="쇼핑몰(빕다방)">
+            <img src="images/project-bibdabang.png" alt="쇼핑몰(빕다방)" />
             <figcaption class="readable-hidden">쇼핑몰(빕다방)</figcaption>
           </figure>
           <ul class="project__tags">
@@ -147,14 +204,41 @@
             순수 자바스크립트를 이용해 만든 쇼핑몰입니다.<br />
             '빽다방'의 데이터를 이용하였습니다.
           </p>
+          <ul class="project__links">
+            <li>
+              <a
+                href="https://github.com/ellie-shim/fds-mid-template"
+                target="_blank"
+                class="fab fa-github"
+                ><span class="readable-hidden"
+                  >요기요 클론 프로젝트 Github 바로가기</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://jovial-lalande-ce4dcc.netlify.com"
+                target="_blank"
+                class="fab fa-chrome"
+                ><span class="readable-hidden"
+                  >요기요 클론 프로젝트 웹사이트 바로가기</span
+                ></a
+              >
+            </li>
+          </ul>
         </article>
         <!-- 3번째 프로젝트 -->
         <article class="project__item web__size">
-          <h3><a href="https://id.hankyung.com/login/login.do">한국경제 통합로그인 시스템(+관리자 시스템)</a></h3>
+          <h3>한국경제 통합로그인 시스템(+관리자 시스템)</h3>
           <div class="project__period"><span>2016.10 ~ 2017.02</span></div>
           <figure class="project__screenshot">
-            <img src="images/project-hankyung.png" alt="한국경제 통합로그인 시스템">
-            <figcaption class="readable-hidden">한국경제 통합로그인 시스템</figcaption>
+            <img
+              src="images/project-hankyung-w.png"
+              alt="한국경제 통합로그인 시스템"
+            />
+            <figcaption class="readable-hidden">
+              한국경제 통합로그인 시스템
+            </figcaption>
           </figure>
           <ul class="project__tags">
             <li>HTML</li>
@@ -167,9 +251,22 @@
             <li>Design</li>
           </ul>
           <p class="project__description">
-            통합로그인(SSO) 시스템 구축 프로젝트 중 디자인과 퍼블리싱을 진행했습니다.<br />
+            통합로그인(SSO) 시스템 구축 프로젝트 중 디자인과 퍼블리싱을
+            진행했습니다.<br />
             IE9버전까지 크로스 브라우징, 웹접근성과 웹표준을 맞추었습니다.
           </p>
+          <ul class="project__links">
+            <li>
+              <a
+                href="https://id.hankyung.com/login/login.do"
+                target="_blank"
+                class="fab fa-chrome"
+                ><span class="readable-hidden"
+                  >요기요 클론 프로젝트 웹사이트 바로가기</span
+                ></a
+              >
+            </li>
+          </ul>
         </article>
         <!-- 4번째 프로젝트 -->
         <article class="project__item">
@@ -217,7 +314,7 @@
           </ul>
           <p class="project__description">
             안전신문고 홈페이지의 퍼블리싱을 진행했습니다. <br />
-            크로스 브라우징, 웹접근성, 웹표준성을 맞추었습니다.           
+            크로스 브라우징, 웹접근성, 웹표준성을 맞추었습니다.
           </p>
         </article>
         <!-- 7번째 프로젝트 -->
@@ -251,20 +348,30 @@
           <h2><span>Activity</span></h2>
           <article class="activity__item">
             <figure>
-              <img src="images/siots.png" alt="시옷즈 스터디">
+              <img src="images/siots.png" alt="시옷즈 스터디" />
               <figcaption class="readable-hidden">시옷즈 스터디</figcaption>
             </figure>
             <h3>Siots Study</h3>
             <div class="activity__period"><span>2019.01~</span></div>
             <p class="activity__description">
-              <span>(미래의)</span> 프론트엔드 개발자 4명이 모인 스터디. 매주 만나 각자가 맡은 파트의 지식을 나눔합니다.
-              <br />Gitlab과 Trello로 스터디 진행을 관리하고 있습니다. 
+              <span>(미래의)</span> 프론트엔드 개발자 4명이 모인 스터디. 매주
+              만나 각자가 맡은 파트의 지식을 나눔합니다. <br />Gitlab과 Trello로
+              스터디 진행을 관리하고 있습니다.
             </p>
-            <div class="activity__siots_link">              
-              <a href="https://gitlab.com/siots-study/topics/wikis/home" target="_blank" class="fab fa-gitlab">Siots Gitlab</a>
-              <a href="https://trello.com/b/OA0kDwHH/siots-study" target="_blank"  class="fab fa-trello">Siots Trello</a>
+            <div class="activity__siots_link">
+              <a
+                href="https://gitlab.com/siots-study/topics/wikis/home"
+                target="_blank"
+                class="fab fa-gitlab"
+                >Siots Gitlab</a
+              >
+              <a
+                href="https://trello.com/b/OA0kDwHH/siots-study"
+                target="_blank"
+                class="fab fa-trello"
+                >Siots Trello</a
+              >
             </div>
-
           </article>
         </section>
       </div>
@@ -272,7 +379,8 @@
     <footer class="footer">
       Copyright © 2019 Soyoung Shim all rights reserved
       <br />
-      이 사이트는 포트폴리오 용도로 제작하였으며 상업적인 용도로 사용하지 않음을 밝힙니다.
+      이 사이트는 포트폴리오 용도로 제작하였으며 상업적인 용도로 사용하지 않음을
+      밝힙니다.
     </footer>
     <div class="go-top">
       <i class="fas fa-arrow-up"></i>
