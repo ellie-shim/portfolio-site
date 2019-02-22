@@ -6,12 +6,15 @@ const projectWrapBtn = document.querySelector(".project__wrap__toggle-btn");
 // 프로젝트 더보기 버튼 활성화/비활성화
 
 projectWrapBtn.addEventListener("click", () => {
-  projectWrap.classList.toggle("act");
-  // if (e.target.value === "off") {
-  //   projectWrapBtn.textContent = "뷰";
-  // } else if (e.target.value === "on") {
-  //   projectWrapBtn.textContent = "뷰뷰";
-  // }
+  if (projectWrapBtn.value === "off") {
+    projectWrapBtn.textContent = "프로젝트 닫기";
+    projectWrap.classList.add("act");
+    projectWrapBtn.value = "on";
+  } else if (projectWrapBtn.value === "on") {
+    projectWrapBtn.textContent = "프로젝트 더보기";
+    projectWrap.classList.remove("act");
+    projectWrapBtn.value = "off";
+  }
 });
 
 // 스크롤 시 헤더 스타일 추가
