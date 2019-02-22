@@ -1,34 +1,139 @@
 @charset "UTF-8";
 
-
 /* 스타일 초기화 */
-html{
-   margin: 0;  padding: 0;  border: 0;  box-sizing: border-box; 
-  font:inherit;  font-family: 'NanumSquare', sans-serif; 
-  color: #222;  text-decoration: none;  list-style: none;  border-collapse: collapse;  border-spacing: 0;
-  line-height:1.4;
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font: inherit;
+  font-family: "NanumSquare", sans-serif;
+  color: #222;
+  text-decoration: none;
+  list-style: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  line-height: 1.4;
   scroll-behavior: smooth;
 }
-body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,
-code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,form,label,
-legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,
-hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,fieldset,button {
-  margin: 0;  padding: 0;  border: 0;  box-sizing: border-box; 
-  font:inherit;  font-family: 'NanumSquare', sans-serif; 
-  color: #222;  text-decoration: none;  list-style: none;  border-collapse: collapse;  border-spacing: 0;
-  line-height:1.4; font-size:1.1rem;
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+fieldset,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font: inherit;
+  font-family: "NanumSquare", sans-serif;
+  color: #222;
+  text-decoration: none;
+  list-style: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  line-height: 1.4;
+  font-size: 1.1rem;
 }
 
 /* HTML5 display-role reset for older browsers */
 /* 익스플로러 하위버전은 해당 태그를 인식하지 못한다. 인식하지 못하는 태그는 inline 요소로 들어가기때문에 width, height등의 속성 설정이 안된다. */
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
   display: block;
 }
 ul {
   list-style: none;
 }
 table {
-  border-collapse: collapse;  border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 /******** CSS 모듈 ********/
 .clearfix::after {
@@ -62,8 +167,8 @@ img {
   width: 100%;
 }
 // drag selection style
-::selection{
-  background-color:#b7dbf3;
+::selection {
+  background-color: #fccd73;
 }
 // scroll bar style
 /* width */
@@ -76,103 +181,102 @@ img {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #b7dbf3; 
+  background: #b7dbf3;
   border-radius: 10px;
 }
 
 // font
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,500');
-@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600');
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
-@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,500");
+@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css");
 
 // variable
 $url-images: "../images/";
 $color-main: #b7dbf3;
-$color-main-text:#89b2cd;
+$color-main-text: #89b2cd;
 $color-menu: #6a6a6a;
-$color-bg : #fafafa;
-$color-yellow : #fccd73;
+$color-bg: #fafafa;
+$color-yellow: #fccd73;
 
 // mixin
 
 // 미디어쿼리 분기점
 @mixin breakpoint($breakpoint) {
-  @if $breakpoint == 'mobile' {
+  @if $breakpoint == "mobile" {
     @media (min-width: 320px) and (max-width: 767px) {
       @content;
     }
-  } @else if $breakpoint == 'tablet' {
+  } @else if $breakpoint == "tablet" {
     @media (min-width: 768px) {
       @content;
     }
-  } @else if $breakpoint == 'laptop' {
+  } @else if $breakpoint == "laptop" {
     @media (min-width: 992px) {
       @content;
     }
-  } @else if $breakpoint == 'desktop' {
+  } @else if $breakpoint == "desktop" {
     @media (min-width: 1200px) {
       @content;
     }
   }
 }
 
-@mixin font-monts($weight){
-  font-family: 'Montserrat', sans-serif;
-  font-weight: $weight
+@mixin font-monts($weight) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: $weight;
 }
-@mixin font-mj{
-  font-family: 'Major Mono Display', monospace;
+@mixin font-mj {
+  font-family: "Major Mono Display", monospace;
 }
-@mixin font-nanum{
-  font-family: 'Nanum Gothic', sans-serif;
+@mixin font-nanum {
+  font-family: "Nanum Gothic", sans-serif;
 }
-@mixin font-main($weight){
-  font-family: 'Titillium Web', sans-serif;
-  font-weight: $weight
+@mixin font-main($weight) {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: $weight;
 }
 // common width 1200
-@mixin common-width{
-  max-width:1200px;
-  margin:0 auto;
+@mixin common-width {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-@mixin grid-basic{  
-  display:grid;
+@mixin grid-basic {
+  display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(12, 1fr);
 }
 
 // section header
-@mixin section-header{
+@mixin section-header {
   text-align: center;
-  margin-bottom:2rem;
-    span{
-      border-bottom:5px solid $color-main;
-      display:inline-block;
-      line-height:1;
-      padding-bottom:15px;
-      font-size:1.9rem;
-      @include font-monts(600)
-    }
+  margin-bottom: 2rem;
+  span {
+    border-bottom: 5px solid $color-main;
+    display: inline-block;
+    line-height: 1;
+    padding-bottom: 15px;
+    font-size: 1.9rem;
+    @include font-monts(600);
+  }
 }
 
 // period tag 기간 태그
-@mixin period-tags{  
-      display:inline-block;
-      background-color: $color-main;
-      border-radius: 5px;
-      padding: 0 14px;
-      $height : 22px;
-      height:$height;
-      line-height:$height;
-      color:white;
-      font-size:0.9rem;
-      @include font-main(400);
+@mixin period-tags {
+  display: inline-block;
+  background-color: $color-main;
+  border-radius: 5px;
+  padding: 0 14px;
+  $height: 22px;
+  height: $height;
+  line-height: $height;
+  color: white;
+  font-size: 0.9rem;
+  @include font-main(400);
 }
-
 
 // 애니메이션 키프레임  animation keyframes
 

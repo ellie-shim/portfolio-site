@@ -196,13 +196,40 @@
     text-align: center;
   }
 }
-.project-wrap {
+.project__wrap {
   display: flex;
   flex-wrap: wrap;
   max-width: 1200px;
   align-items: stretch;
   justify-content: center;
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 1s;
+  &__toggle {
+    width: 100%;
+    padding: 2rem 2rem 0;
+    text-align: center;
+    &-btn {
+      width: 100%;
+      max-width: 900px;
+      text-align: center;
+      margin: 0 auto;
+      background-color: white;
+      border: 1px solid $color-main-text;
+      color: $color-main-text;
+      padding: 0.6rem 0;
+      cursor: pointer;
+      &:hover {
+        background-color: $color-main;
+        color: white;
+      }
+    }
+  }
 }
+.act .project__wrap {
+  max-height: 9999px;
+}
+
 .project {
   padding: 4rem 0;
   @include common-width;

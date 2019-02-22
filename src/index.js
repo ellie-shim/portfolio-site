@@ -1,25 +1,38 @@
-const nav = document.querySelector('.header__nav');
-const goTop = document.querySelector('.go-top');
+const nav = document.querySelector(".header__nav");
+const goTop = document.querySelector(".go-top");
+const projectWrap = document.querySelector(".project__wrap__control");
+const projectWrapBtn = document.querySelector(".project__wrap__toggle-btn");
+
+// 프로젝트 더보기 버튼 활성화/비활성화
+
+projectWrapBtn.addEventListener("click", () => {
+  projectWrap.classList.toggle("act");
+  // if (e.target.value === "off") {
+  //   projectWrapBtn.textContent = "뷰";
+  // } else if (e.target.value === "on") {
+  //   projectWrapBtn.textContent = "뷰뷰";
+  // }
+});
 
 // 스크롤 시 헤더 스타일 추가
 document.addEventListener("scroll", () => {
   let top = window.pageYOffset;
-  if(top < 60){
-    nav.classList.remove("header__nav-scroll_on")
-  }else{
-    nav.classList.add("header__nav-scroll_on")
+  if (top < 60) {
+    nav.classList.remove("header__nav-scroll_on");
+  } else {
+    nav.classList.add("header__nav-scroll_on");
   }
-})
+});
 
 // go top 버튼 class 추가
 goTop.addEventListener("mouseenter", () => {
-  goTop.classList.add('go-top-hover')
-})
-goTop.addEventListener('mouseleave', () => {
-  goTop.classList.remove('go-top-hover')
-})
+  goTop.classList.add("go-top-hover");
+});
+goTop.addEventListener("mouseleave", () => {
+  goTop.classList.remove("go-top-hover");
+});
 
 // go top버튼 클릭시 스크롤 최상단으로 이동
-goTop.addEventListener('click', () => {
-  window.scrollTo(0,0)
-})
+goTop.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});
