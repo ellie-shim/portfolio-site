@@ -196,6 +196,13 @@
     text-align: center;
   }
 }
+.project-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  align-items: stretch;
+  justify-content: center;
+}
 .project {
   padding: 4rem 0;
   @include common-width;
