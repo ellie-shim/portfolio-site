@@ -333,3 +333,39 @@ $color-yellow: #fccd73;
     transform: scale(1);
   }
 }
+
+// skill graph animation
+// TODO : 퍼센테이지 별 변수 설정 후 mixin으로 애니메이션-변수% 로 설정하고싶다.
+// 근데 지금은 못하겠다. 나중에 해야지.
+@keyframes skill90 {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 90%;
+  }
+}
+@keyframes skill60 {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 60%;
+  }
+}
+@keyframes skill50 {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 50%;
+  }
+}
+@keyframes skill30 {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 30%;
+  }
+}

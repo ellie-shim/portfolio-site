@@ -163,7 +163,7 @@
 }
 .skill {
   @include common-width;
-  display: grid;
+  // display: grid; // item2 수정하면서 잠깐 비활성화
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   padding: 4rem 2rem;
@@ -195,6 +195,104 @@
   &__summary {
     text-align: center;
   }
+  &__item2 {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    dt {
+      width: 100%;
+    }
+    .skill__title {
+      position: absolute;
+      left: 0;
+      text-transform: uppercase;
+      width: 100px;
+      text-align: right;
+    }
+    .per {
+      width: 100%;
+      height: 30px;
+      margin: 0 0 10px 120px;
+
+      // background: -webkit-repeating-linear-gradient(
+      //   left,
+      //   #ddd,
+      //   #ddd 1px,
+      //   transparent 1px,
+      //   transparent 10%
+      // );
+      // background: -o-repeating-linear-gradient(
+      //   left,
+      //   #ddd,
+      //   #ddd 1px,
+      //   transparent 1px,
+      //   transparent 10%
+      // );
+      // background: repeating-linear-gradient(
+      //   to right,
+      //   #ddd,
+      //   #ddd 1px,
+      //   transparent 1px,
+      //   transparent 10%
+      // );
+      &::after {
+        content: "";
+        display: block;
+        // background-color: pink;
+        background: linear-gradient(
+            90deg,
+            rgba(255, 225, 132, 0.7) 50%,
+            rgba(255, 255, 255, 0) 50%
+          ),
+          // linear-gradient(
+            //   90deg,
+            //   rgba(32, 113, 120, 0.3) 50%,
+            //   rgba(255, 255, 255, 0) 50%
+            // ),
+            linear-gradient(
+              90deg,
+              rgba(255, 150, 102, 0.3) 50%,
+              rgba(255, 255, 255, 0) 50%
+            ),
+          linear-gradient(
+            90deg,
+            rgba(23, 76, 79, 0.1) 50%,
+            rgba(255, 255, 255, 0) 50%
+          );
+        background-size: 7em 7em, 5em 5em, 3em 3em, 1em 1em;
+        background-color: #f5e9be;
+        font: 10px/1.4 "Trebuchet MS", Verdana, sans-serif;
+        height: 90%;
+        cursor: pointer;
+        position: relative;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: fowards;
+        animation-timing-function: ease-in-out;
+      }
+      &-90::after {
+        animation-name: skill90;
+      }
+      &-60::after {
+        animation-name: skill60;
+      }
+      &-50::after {
+        animation-name: skill50;
+      }
+      &-30::after {
+        animation-name: skill30;
+      }
+    }
+  }
+}
+@for $i from 1 through 100 {
+  .per-#{$i} {
+    &::after {
+      $value: ($i * 1%);
+      width: $value;
+    }
+  }
 }
 .project__wrap {
   display: flex;
@@ -222,6 +320,9 @@
       &:hover {
         background-color: $color-main;
         color: white;
+      }
+      &:focus {
+        outline: none;
       }
     }
   }
