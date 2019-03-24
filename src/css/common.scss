@@ -369,3 +369,11 @@ $color-yellow: #fccd73;
     width: 30%;
   }
 }
+@keyframes skillPerAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}

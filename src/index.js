@@ -1,3 +1,5 @@
+import Typed from "typed.js";
+
 const nav = document.querySelector(".header__nav");
 const goTop = document.querySelector(".go-top");
 const projectWrap = document.querySelector(".project__wrap__control");
@@ -39,3 +41,15 @@ goTop.addEventListener("mouseleave", () => {
 goTop.addEventListener("click", () => {
   window.scrollTo(0, 0);
 });
+
+// 첫 화면 텍스트 타이핑 이펙트
+const options = {
+  strings: ["HTML5", "CSS3", "JavaScript", "JQuery", "Sass", "React"],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true,
+  cursorChar: "_"
+};
+
+const typed = new Typed("#typing__skill", options);
