@@ -68,15 +68,25 @@
     bottom: 0;
     width: 100%;
     z-index: 9999;
+    height: 120px;
 
     a {
       @include font-main(400);
       display: inline-block;
-      line-height: 120px;
+      line-height: 60px;
       font-size: 1rem;
       color: white;
+      padding: 0 2.3%;
       &:hover {
         color: $color-main;
+      }
+
+      @include breakpoint("tablet") {
+        font-size: 1.2rem;
+        &:hover {
+          text-decoration: underline wavy $color-main;
+          color: white;
+        }
       }
     }
     &-sticky_on {
@@ -91,10 +101,6 @@
           color: $color-main;
         }
       }
-    }
-    // 768 tablet
-    @include breakpoint("tablet") {
-      display: none;
     }
   }
   // tablet 이상 버전 nav
@@ -127,9 +133,15 @@
   height: 100vh;
   background: #24c6dc;
   background: linear-gradient(to right, #514a9d, #24c6dc);
-  text-align: center;
   padding-top: 8rem;
   position: relative;
+  &__text__wrap {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-70%);
+  }
   &__text {
     color: rgba(255, 255, 255, 0.8);
     font-size: 3.4rem;
@@ -143,11 +155,14 @@
     .typing__skill {
       display: block;
     }
+    @include breakpoint("tablet") {
+      display: inline-block;
+    }
   }
   &__site {
-    margin-top: 4rem;
     color: rgba(255, 255, 255, 0.7);
     font-size: 1.2rem;
+    text-align: center;
   }
 }
 
