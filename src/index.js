@@ -31,6 +31,16 @@ document.addEventListener("scroll", () => {
   }
 });
 
+document.addEventListener("scroll", () => {
+  let point = welcomeEl.clientHeight;
+  let top = window.pageYOffset;
+  if (top < point) {
+    goTop.classList.remove("go-top--on");
+  } else {
+    goTop.classList.add("go-top--on");
+  }
+});
+
 // go top 버튼 class 추가
 goTop.addEventListener("mouseenter", () => {
   goTop.classList.add("go-top-hover");
