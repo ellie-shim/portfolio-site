@@ -68,8 +68,7 @@
     bottom: 0;
     width: 100%;
     z-index: 9999;
-    height: 120px;
-
+    padding-bottom: 80px;
     a {
       @include font-main(400);
       display: inline-block;
@@ -90,13 +89,14 @@
       }
     }
     &-sticky_on {
-      background-color: white;
+      // background-color: white;
+      @include main-gradient;
       position: fixed;
       top: 0;
       height: 50px;
+      padding: 0;
       a {
         line-height: 50px;
-        color: $color-menu;
         &:hover {
           color: $color-main;
         }
@@ -168,20 +168,15 @@
 .about {
   padding-top: 50px;
   @include common-width;
-  @include breakpoint("tablet") {
-    &__picture {
-      float: left;
-    }
-    p {
-      text-align: left;
-    }
-  }
   &__picture {
-    width: 132px;
+    width: 140px;
     margin: 0.5rem auto 2rem auto;
     img {
-      border-radius: 50%;
+      border-radius: 2%;
     }
+  }
+  &__name {
+    font-size: 1.2rem;
   }
   &__title {
     @include section-header;
@@ -191,6 +186,9 @@
     padding: 0 2rem;
     max-width: 700px;
     margin: 0 auto;
+    p {
+      margin-bottom: 0.5rem;
+    }
     &__eng {
       margin-top: 15px;
       @include font-main(400);
@@ -198,7 +196,7 @@
     }
   }
   &__sns {
-    padding: 3rem;
+    padding: 1rem 0 3rem;
     ul {
       display: flex;
       justify-content: space-between;
@@ -210,6 +208,20 @@
           color: $color-main;
         }
       }
+    }
+  }
+  @include breakpoint("tablet") {
+    &__picture {
+      width: 230px;
+      float: left;
+      padding-right: 2rem;
+      margin: 0;
+    }
+    p {
+      text-align: left;
+    }
+    &__sns ul {
+      margin: 0;
     }
   }
 }
@@ -262,7 +274,7 @@
       position: absolute;
       left: 0;
       text-transform: uppercase;
-      width: 90px;
+      width: 82px;
       text-align: right;
       line-height: 27px;
     }
@@ -454,7 +466,7 @@
         margin-right: 2px;
       }
       border: 1px solid $color-main;
-      border-radius: 5px;
+      border-radius: 2px;
       display: inline-block;
       height: 22px;
       line-height: 20px;
@@ -568,7 +580,7 @@
       color: $color-main;
       @include font-main(400);
       border: 1px solid $color-main;
-      border-radius: 5px;
+      border-radius: 2px;
       padding: 0.5rem 1rem;
       font-size: 1.1rem;
       &::before {
@@ -596,7 +608,8 @@
 .go-top {
   position: fixed;
   bottom: 2rem;
-  left: calc(50% - 20px);
+  right: 2rem;
+  // left: calc(50% - 20px);
   display: inline-block;
   // background: url('../images/arrow-up-solid.svg') no-repeat 0 50%;
   border: 1px solid $color-yellow;

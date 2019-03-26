@@ -7,7 +7,7 @@ $color-main-text: #1c7ed6;
 $color-menu: #6a6a6a;
 $color-bg: #fafafa;
 $color-yellow: #fccd73;
-$color-graph: #bac8ff;
+$color-graph: #a5d8ff;
 /* 스타일 초기화 */
 html {
   margin: 0;
@@ -268,7 +268,7 @@ img {
 @mixin period-tags {
   display: inline-block;
   background-color: $color-main;
-  border-radius: 5px;
+  border-radius: 2px;
   padding: 0 14px;
   $height: 22px;
   height: $height;

@@ -22,7 +22,7 @@ projectWrapBtn.addEventListener("click", () => {
 // 스크롤 시 nav에 스티키 추가  : 모바일에서 작동이 안돼서 자바스크립트로 구현..
 const welcomeEl = document.querySelector(".welcome");
 document.addEventListener("scroll", () => {
-  let point = welcomeEl.clientHeight - 70;
+  let point = welcomeEl.clientHeight - 135;
   let top = window.pageYOffset;
   if (top < point) {
     nav.classList.remove("header__nav-sticky_on");
