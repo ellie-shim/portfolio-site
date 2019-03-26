@@ -1,5 +1,13 @@
 @charset "UTF-8";
-
+// variable
+$url-images: "../images/";
+// $color-main: #b7dbf3;
+$color-main: #1c7ed6;
+$color-main-text: #1c7ed6;
+$color-menu: #6a6a6a;
+$color-bg: #fafafa;
+$color-yellow: #fccd73;
+$color-graph: #bac8ff;
 /* 스타일 초기화 */
 html {
   margin: 0;
@@ -109,7 +117,7 @@ button {
   border-collapse: collapse;
   border-spacing: 0;
   line-height: 1.4;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -168,7 +176,7 @@ img {
 }
 // drag selection style
 ::selection {
-  background-color: #fccd73;
+  background-color: #dbe4ff;
 }
 // scroll bar style
 /* width */
@@ -192,14 +200,6 @@ img {
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600");
 @import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
 @import url("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css");
-
-// variable
-$url-images: "../images/";
-$color-main: #b7dbf3;
-$color-main-text: #89b2cd;
-$color-menu: #6a6a6a;
-$color-bg: #fafafa;
-$color-yellow: #fccd73;
 
 // mixin
 
@@ -276,6 +276,12 @@ $color-yellow: #fccd73;
   color: white;
   font-size: 0.9rem;
   @include font-main(400);
+}
+
+// 메인 그라데이션
+@mixin main-gradient {
+  background: #24c6dc;
+  background: linear-gradient(to right, #514a9d, #24c6dc);
 }
 
 // 애니메이션 키프레임  animation keyframes
