@@ -19,8 +19,9 @@ projectWrapBtn.addEventListener("click", () => {
   }
 });
 
-// 스크롤 시 nav에 스티키 추가  : 모바일에서 작동이 안돼서 자바스크립트로 구현..
 const welcomeEl = document.querySelector(".welcome");
+// 스크롤 시 nav에 스티키 추가  : 모바일에서 작동이 안돼서 자바스크립트로 구현..
+// 추가 : 스티키가 분명 안됐었는데..인터넷 문제였었나 보다.. 갑자기 잘 돼서 삭제.
 document.addEventListener("scroll", () => {
   let point = welcomeEl.clientHeight - 135;
   let top = window.pageYOffset;
@@ -28,6 +29,16 @@ document.addEventListener("scroll", () => {
     nav.classList.remove("header__nav-sticky_on");
   } else {
     nav.classList.add("header__nav-sticky_on");
+  }
+});
+
+document.addEventListener("scroll", () => {
+  let point = welcomeEl.clientHeight;
+  let top = window.pageYOffset;
+  if (top < point) {
+    goTop.classList.remove("go-top--on");
+  } else {
+    goTop.classList.add("go-top--on");
   }
 });
 
@@ -46,7 +57,7 @@ goTop.addEventListener("click", () => {
 
 // 첫 화면 텍스트 타이핑 이펙트
 const options = {
-  strings: ["HTML5", "CSS3", "JavaScript", "JQuery", "Sass", "React"],
+  strings: ["HTML5", "CSS3", "JavaScript", "Sass", "React", "JQuery"],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,
