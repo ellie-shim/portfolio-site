@@ -15,7 +15,7 @@ html {
   border: 0;
   box-sizing: border-box;
   font: inherit;
-  font-family: "NanumSquare", sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   color: #222;
   text-decoration: none;
   list-style: none;
@@ -110,7 +110,8 @@ button {
   border: 0;
   box-sizing: border-box;
   font: inherit;
-  font-family: "NanumSquare", sans-serif;
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 100;
   color: #222;
   text-decoration: none;
   list-style: none;
@@ -118,6 +119,7 @@ button {
   border-spacing: 0;
   line-height: 1.4;
   font-size: 1rem;
+  letter-spacing: -0.5px;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -200,9 +202,9 @@ img {
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600");
 @import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
 @import url("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css");
+@import url("https://fonts.googleapis.com/css?family=Gothic+A1:100");
 
 // mixin
-
 // 미디어쿼리 분기점
 @mixin breakpoint($breakpoint) {
   @if $breakpoint == "mobile" {
@@ -255,12 +257,12 @@ img {
   text-align: center;
   margin-bottom: 2rem;
   span {
-    border-bottom: 5px solid $color-main;
+    border-bottom: 2px solid $color-main;
     display: inline-block;
     line-height: 1;
     padding-bottom: 15px;
     font-size: 1.9rem;
-    @include font-monts(600);
+    @include font-monts(300);
   }
 }
 
